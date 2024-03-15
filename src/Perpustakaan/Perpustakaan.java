@@ -82,13 +82,21 @@ public class Perpustakaan {
             }
             System.out.println(")");
             System.out.println("  " + buku.getSinopsis());
-            System.out.println("  " + "Jumlah kata dalam sinopsis: " + buku.jumlahKata() + " kata");
         }
         System.out.println();
         });
 
-        System.out.println("Kemiripan antara buku " + bukuTeknologi.get(0).getJudul() + " dan " + bukuTeknologi.get(1).getJudul() + " adalah " + String.format("%.2f", Buku.checkSimilarity(bukuTeknologi.get(0), bukuTeknologi.get(1))) + "%");
+        System.out.println("-------------------------------------");
 
-        System.out.println("Buku pertama dari kategori Filsafat: " + bukuFilsafat.get(0).copy().getJudul());
+        Alat alat = new Alat();
+
+        // Jumlah kata
+        System.out.println("Jumlah kata sinopsis buku pertama di kategori Teknologi adalah : " + alat.jumlahKata(bukuTeknologi.get(0)));
+        // Kemiripan
+        System.out.printf("Kemiripan buku %s dengan buku %s: %.2f%%\n", bukuTeknologi.get(0).getJudul(), bukuTeknologi.get(1).getJudul(), Alat.checkSimilarity(bukuTeknologi.get(0), bukuTeknologi.get(1)));
+        // Copy
+        System.out.println("Copy buku: " + alat.copy(bukuTeknologi.get(0)).getJudul());
+
+
     }
 }
