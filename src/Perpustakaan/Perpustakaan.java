@@ -96,7 +96,5 @@ public class Perpustakaan {
         System.out.printf("Kemiripan buku %s dengan buku %s: %.2f%%\n", bukuTeknologi.get(0).getJudul(), bukuTeknologi.get(1).getJudul(), Alat.checkSimilarity(bukuTeknologi.get(0), bukuTeknologi.get(1)));
         // Copy
         System.out.println("Copy buku: " + alat.copy(bukuTeknologi.get(0)).getJudul());
-
-
     }
 }
